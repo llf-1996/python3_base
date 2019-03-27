@@ -16,6 +16,16 @@ def clear_html_re(src_html):
     dst_html = re.sub(r"\s+", "", content)  # 去除空白字符
     return dst_html
 
+'''
+# v2
+cleanr = re.compile('</?\s*[a-zA-Z]+\s*.*?>')
+
+def cleanhtml(raw_html):
+    cleantext = re.sub(cleanr, '', raw_html)
+    cleantext = re.sub(r"\s+", "", cleantext)
+    return cleantext
+'''
+
 
 def get_content(url):
     '''
