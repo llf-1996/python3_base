@@ -7,6 +7,7 @@
 @IDE: Pycharm
 @Time: 2019-04-24
 """
+from datetime import timedelta
 import djcelery
 
 djcelery.setup_loader()
@@ -40,4 +41,18 @@ CELERY_ACKS_LATE = True
 CELERY_MAX_TASKS_PER_CHILD = 100
 # 单个任务的最大运行时间
 CELERYD_TASK_TIME_LIMIT = 12*30
+
+# 定时任务
+CELERYBEAT_SCHEDULE = {
+    'task1': {
+        'task': 'celery-task2',
+        'schedule': timedelta(seconds=5),
+        # 'schedule': crontab(hour=20, minute=19),
+        'args': [1, 2],  # 参数
+        'kwargs': {'name': 'llf'},  # 参数
+        'options': {
+            'queue': 'beat_tasks',  # 指定队列
+        }
+    }
+}
 
