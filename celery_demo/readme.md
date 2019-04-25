@@ -19,12 +19,15 @@ ValueError: not enough values to unpack (expected 3, got 0)
 参考博客：https://blog.csdn.net/diqiuyi7777/article/details/88314549
 
 
-定时任务：
-启动：
+## 定时任务：
+### 启动：
 第一种：
 celery_demo# celery beat -A celery_app -l INFO   # celery4.1.0的时区有bug
 celery_demo# celery worker -A celery_app -l INFO
 第二种：
 celery -B -A celery_app worker -l INFO
+
+
+
 
 
