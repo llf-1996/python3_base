@@ -1,0 +1,12 @@
+._*
+!.gitignore
+!.editorconfig
+.idea
+*.py[a-z]
+*.py.swp
+*.sw[p-z]
+*~
+*.log
+test*
+*.bk
+
