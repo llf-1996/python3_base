@@ -1,5 +1,5 @@
 # python3.6.8
-django==1.8
+django==1.11.28
 celery==3.1.26.post2
 redis==2.10.6
 django-celery==3.3.1
