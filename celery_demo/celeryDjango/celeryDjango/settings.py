@@ -126,6 +126,6 @@ STATIC_URL = '/static/'
 # celery
 from .celeryconfig import *
 BROKER_BACKEND = 'redis'
-BROKER_URL = 'redis://148.70.214.104:6379/1'  # 任务队列位置
-CELERY_RESULT_BACKEND = 'redis://148.70.214.104:6379/2'  # 结果输出位置
+BROKER_URL = 'redis://127.0.0.1:6379/1'  # 任务队列位置
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/2'  # 结果输出位置
 CELERY_TIMEZONE = 'Asia/Shanghai'

@@ -1,0 +1,12 @@
+[program:celery-worker]
+command=python3 manage.py celery worker -l INFO
+directory=/celery_demo/celeryDjango
+environment=PATH="/py36/bin"
+stdout_logfile=/celery_demo/celeryDjango/logs/celery_worker.log
+stderr_logfile=/celery_demo/celeryDjango/logs/celery_worker.log
+autostart=true
+autorestart=true
+startsecs=10
+stopwaitsecs=60
+priority=998  ;优先级
+
