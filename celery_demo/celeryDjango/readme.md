@@ -259,3 +259,8 @@ supervisorctl
 #### 查看
 127.0.0.1：9001
 
+
+## admin
+admin
+admin123
+
