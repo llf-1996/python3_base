@@ -11,4 +11,5 @@ test*
 *.bk
 
 celerybeat-schedule.*
+.DS_Store
 
