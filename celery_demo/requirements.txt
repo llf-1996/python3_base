@@ -1,0 +1,4 @@
+# python3.7
+celery==5.0.5
+redis==3.5.3
+eventlet==0.30.0  # 支持window，启动celery添加参数-P eventlet

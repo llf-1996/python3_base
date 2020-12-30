@@ -1,6 +1,4 @@
-# !/usr/bin/python3
-# coding:utf-8
-
+# -*- coding: utf-8 -*-
 """
 @Author: llf
 @File: celeryConfig.py
@@ -10,18 +8,19 @@
 from datetime import timedelta
 from celery.schedules import crontab
 
-BROKER_URL = 'redis://148.70.214.104:6379/1'  # 任务队列位置
-CELERY_RESULT_BACKEND = 'redis://148.70.214.104:6379/2'  # 结果输出位置
-CELERY_TIMEZONE = 'Asia/Shanghai'
+broker_url = 'pyamqp://admin:admin@localhost//'  # rabbitmq作为broker 任务队列位置
+# broker_url = 'redis://localhost:6379/1'  # redis作为broker
+result_backend = 'redis://localhost:6379/2'  # 结果输出位置
+timezone = 'Asia/Shanghai'
 
 # 导入指定的任务模块
-CELERY_IMPORTS = (
+imports = (
     'celery_app.task1',
     'celery_app.task2',
 )
 
 # 定时任务
-CELERYBEAT_SCHEDULE = {
+beat_schedule = {
     'task1': {
         'task': 'celery_app.task1.add',
         'schedule': timedelta(seconds=10),
@@ -32,6 +31,4 @@ CELERYBEAT_SCHEDULE = {
         'schedule': crontab(hour=20, minute=19),
         'args': (4, 5)
     }
-
 }
-

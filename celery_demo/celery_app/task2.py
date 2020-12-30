@@ -1,6 +1,4 @@
-# !/usr/bin/python3
-# coding:utf-8
-
+# -*- coding: utf-8 -*-
 """
 @Author: llf
 @File: task2.py
@@ -16,5 +14,3 @@ from celery_app import app
 def multiply(x, y):
     time.sleep(4)
     return x*y
-
-

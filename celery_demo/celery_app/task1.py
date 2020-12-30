@@ -1,6 +1,4 @@
-# !/usr/bin/python3
-# coding:utf8
-
+# -*- coding: utf-8 -*-
 """
 @Author: llf
 @File: task1.py
@@ -16,5 +14,3 @@ from celery_app import app
 def add(x, y):
     time.sleep(3)
     return x+y
-
-
