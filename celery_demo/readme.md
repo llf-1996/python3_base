@@ -1,4 +1,4 @@
->python 3.7
+>python 3.7  
 >celery 5.0.5
 
 ## 安装
